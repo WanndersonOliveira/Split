@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<title>Split</title>
+	<link rel="stylesheet" type="text/css" href="css/split.css">
+</head>
+<body>
+ <script type="text/javascript">
+
+ 	 function changecolor(){
+ 	 	document.getElementById("botao_enter").style.background = "#0039e6";
+ 	 }
+
+ 	 function colororiginal(){
+ 	 	document.getElementById("botao_enter").style.background = "#3366ff";
+ 	 }
+
+ 	 function checkform(){
+ 	 	var usuario = forml.user.value;
+        var senha = forml.password.value;
+
+ 	 	if(usuario != "Wannderson" || senha != "WandoMeyre123"){
+ 	 		alert("Usuário ou senha incorretos!")
+ 	 	} else {
+ 	 		alert("Clique novamente no botão ENTER");
+ 	 		document.getElementById("botao").style.display = "none";
+ 	 		document.getElementById("botaooculto").style.display = "block";
+ 	 	}
+ 	 }
+
+ 	 function alteralink1(){
+ 	 	document.getElementById("text_link").style.text = "underline";
+ 	 }
+
+ 	 function linkoriginal(){
+ 	 	document.getElementById("text_link").style.text = "none";
+ 	 }
+
+ 	 function alteralink2(){
+ 	 	document.getElementById("text_link2").style.text = "underline";
+ 	 }
+
+ 	 function linkoriginal2(){
+ 	 	document.getElementById("text_link2").style.text = "none";
+ 	 }
+ </script>
+ <div id = "photo">
+ 	<img src="split_images/people2.jpg">
+ </div>
+ <div id="entermenu">
+ 	 <div id="image">
+ 	     <a href="index.html">
+ 	     	<img src="split_images/split.png">
+ 	     </a>
+ 	 </div>
+ 	 <form name="forml">
+ 	     <div id="enter_user">
+ 		     <p id="user_p">User</p>
+ 		     <input type="text" id="user" name="user" size="20">
+ 	     </div>
+ 	     <div id="enter_password">
+ 	         <p id="password_p">Password</p>
+ 	 	     <input type="password" id="password" name="password" size="20">
+ 	     </div>
+ 	   
+ 	     <div id="botao">
+ 	     	<div id="botao_enter" onmouseover="changecolor()" onmouseleave="colororiginal()" onclick="checkform()">
+ 	 	     <p id="enter">ENTER</p>
+ 	        </div>
+ 	     </div>
+         
+         <div id="botaooculto">
+         	<a href="split.html">
+ 	 	       <div id="botao_enter1">
+ 	 	         <p id="enter1">ENTER</p>
+ 	            </div>
+ 	 	    </a>
+         </div>
+ 	     
+ 	 </form>
+ 	 <div id="account">
+ 	 	<p>Don't have account?
+ 	 	<a href="" id="text_link" onmouseover="alteralink1()" onmouseleave="linkoriginal()">Join</a></p>
+ 	 </div>
+ 	 <div id="password_f">
+ 	 	<p>Forgot your password?
+        <a href="" id="text_link2" onmouseover="alteralink2()" onmouseleave="linkoriginal2()">Click here</a>
+ 	 	</p>
+ 	 </div>
+ </div>
+ <div id="text1">
+ 	 <p id="txt1">The today's social network</p>
+ </div>
+ <div id="text2">
+ 	 <p id="txt2">200 million of users registered</p>
+ </div>
+</body>
+</html>
